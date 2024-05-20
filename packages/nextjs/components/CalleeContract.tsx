@@ -1,4 +1,4 @@
-import { Address } from "./scaffold-eth";
+import { Address, Balance } from "./scaffold-eth";
 import { formatEther } from "viem";
 import { useDeployedContractInfo, useScaffoldReadContract } from "~~/hooks/scaffold-eth";
 
@@ -20,6 +20,8 @@ export const CalleeContract = () => {
       <div>
         <h1>Callee Contract</h1>
         <Address address={callee?.address} />
+        <h2>Contact Balance</h2>
+        <Balance address={callee?.address} />
       </div>
       <div>
         {callee?.address && (
